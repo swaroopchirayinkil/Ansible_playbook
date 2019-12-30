@@ -1,0 +1,8 @@
+-
+ name: copy files to target servers
+ hosts: all
+ tasks:
+   - name: copy files
+     copy:
+        src: /usr/local/src/swaroop.txt
+        dest: /usr/local/src

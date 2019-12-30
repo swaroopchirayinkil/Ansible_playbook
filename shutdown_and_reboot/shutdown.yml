@@ -1,0 +1,12 @@
+---
+- name: shutdown
+  become: 'yes'
+  become_method: sudo
+  hosts: all
+  
+  tasks:
+  - name: shutdown hosts
+    command: systemctl poweroff 
+  # when: ansible_facts['os_family'] == "centos"
+    ignore_errors: 'yes'
+...
